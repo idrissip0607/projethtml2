@@ -1,36 +1,188 @@
 <!DOCTYPE html>
-
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="Contactez-nous pour réserver vos délicieuses bouchées" />
+    <meta name="keywords" content="contact, réservation, bouchées, restaurant" />
     <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon" />
-
-    <title>Menu de délicieuses bouchées</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Contact - Menu de délicieuses bouchées</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
   </head>
   <body>
-    <h1>Contactez-nous</h1>
-    <h3>Adresse mail</h3>
-    <a href="mailto:">idrisstrahauray@gmail.com</a>
-    <h3>Numero de téléphone</h3>
-    <a href="tel:+225 05 75 21 71 45">+225 05 75 21 71 45</a>
-    <h3>Localisation</h3>
-    <p>zone 4 Rue 4c decembre,abidjan</p>
-    <br><br><br>
-    <form action="">
-        <label for="Nom&Prenom"><strong>Nom et Prenom</strong></label><br>
-        <input type="text"><br><br>
-        <label for="E-mail"><strong>E-mail</strong></label><br>
-        <input type="email"><br><br>
-        <label for="Numerodetélephone"><strong>Numero de télephone</strong></label><br>
-        <input type="tel"><br><br>
-        <label for="message"><strong>message</strong></label><br>
-        <textarea name="envoyez un message" id="envoyez un message" cols="20" rows="5"></textarea>
-        <input type="submit">
+    <div class="container py-5">
+      <!-- Header avec navigation -->
+      <div class="text-center mb-5">
+        <a href="index.html" class="btn btn-outline-secondary mb-3">
+          <i class="fas fa-arrow-left me-2"></i>Retour au menu
+        </a>
+        <h1 class="display-4 fw-bold text-primary fade-in">Contactez-nous</h1>
+        <p class="lead text-muted fade-in-delay">Nous sommes là pour vous accompagner dans vos réservations</p>
+      </div>
 
+      <div class="row g-5">
+        <!-- Informations de contact -->
+        <div class="col-lg-6">
+          <div class="contact-info-section slide-in-left">
+            <h2 class="h3 mb-4 text-primary">
+              <i class="fas fa-info-circle me-2"></i>Nos coordonnées
+            </h2>
+            
+            <div class="contact-item mb-4">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h5>Adresse e-mail</h5>
+                <a href="mailto:idrisstrahauray@gmail.com" class="contact-link">
+                  idrisstrahauray@gmail.com
+                </a>
+              </div>
+            </div>
 
-    </form>
+            <div class="contact-item mb-4">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h5>Numéro de téléphone</h5>
+                <a href="tel:+22505752171145" class="contact-link">
+                  +225 05 75 21 71 45
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item mb-4">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h5>Localisation</h5>
+                <p class="mb-0">Zone 4 Rue 4c décembre<br>Abidjan, Côte d'Ivoire</p>
+              </div>
+            </div>
+
+            <!-- Horaires d'ouverture -->
+            <div class="opening-hours mt-5">
+              <h3 class="h4 mb-3 text-primary">
+                <i class="fas fa-clock me-2"></i>Horaires d'ouverture
+              </h3>
+              <div class="hours-list">
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Lundi - Vendredi</span>
+                  <span class="fw-bold">11h00 - 22h00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <span>Samedi</span>
+                  <span class="fw-bold">10h00 - 23h00</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Dimanche</span>
+                  <span class="fw-bold">12h00 - 21h00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="col-lg-6">
+          <div class="contact-form-section slide-in-right">
+            <h2 class="h3 mb-4 text-primary">
+              <i class="fas fa-paper-plane me-2"></i>Envoyez-nous un message
+            </h2>
+            
+            <form id="contactForm" class="contact-form">
+              <div class="mb-3">
+                <label for="fullName" class="form-label fw-bold">
+                  <i class="fas fa-user me-2"></i>Nom et Prénom *
+                </label>
+                <input type="text" class="form-control form-control-lg" id="fullName" name="fullName" required>
+                <div class="invalid-feedback">
+                  Veuillez saisir votre nom et prénom.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label fw-bold">
+                  <i class="fas fa-envelope me-2"></i>Adresse e-mail *
+                </label>
+                <input type="email" class="form-control form-control-lg" id="email" name="email" required>
+                <div class="invalid-feedback">
+                  Veuillez saisir une adresse e-mail valide.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="phone" class="form-label fw-bold">
+                  <i class="fas fa-phone me-2"></i>Numéro de téléphone
+                </label>
+                <input type="tel" class="form-control form-control-lg" id="phone" name="phone">
+              </div>
+
+              <div class="mb-3">
+                <label for="subject" class="form-label fw-bold">
+                  <i class="fas fa-tag me-2"></i>Sujet
+                </label>
+                <select class="form-select form-select-lg" id="subject" name="subject">
+                  <option value="">Choisissez un sujet</option>
+                  <option value="reservation">Réservation</option>
+                  <option value="information">Demande d'information</option>
+                  <option value="feedback">Commentaire</option>
+                  <option value="other">Autre</option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label for="message" class="form-label fw-bold">
+                  <i class="fas fa-comment me-2"></i>Message *
+                </label>
+                <textarea class="form-control form-control-lg" id="message" name="message" rows="5" 
+                          placeholder="Décrivez votre demande en détail..." required></textarea>
+                <div class="invalid-feedback">
+                  Veuillez saisir votre message.
+                </div>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg submit-btn">
+                  <i class="fas fa-paper-plane me-2"></i>
+                  <span class="btn-text">Envoyer le message</span>
+                  <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                </button>
+              </div>
+            </form>
+
+            <!-- Message de confirmation -->
+            <div id="successMessage" class="alert alert-success mt-3 d-none">
+              <i class="fas fa-check-circle me-2"></i>
+              Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section CTA -->
+      <div class="text-center mt-5 pt-5 border-top">
+        <div class="cta-section fade-in-up">
+          <h3 class="h4 mb-3">Prêt à découvrir nos délicieuses bouchées ?</h3>
+          <p class="text-muted mb-4">Consultez notre menu complet et laissez-vous tenter par nos créations culinaires.</p>
+          <a href="index.html" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-utensils me-2"></i>Voir le menu
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personnalisé -->
+    <script src="animations.js"></script>
+    <script src="contact.js"></script>
   </body>
+</html>
