@@ -83,7 +83,7 @@ body {
 
       /* Animation pour le texte du hero */
       .imghero h2 {
-        animation: fadeInUp 1s ease 0.5s both;
+        animation: fadeInUp 0.6s ease 0.3s both;
       }
 
       @keyframes fadeInUp {

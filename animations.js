@@ -59,25 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroImg = document.querySelector('.imghero');
     if (heroImg) {
         heroImg.style.opacity = '0';
-        heroImg.style.transform = 'scale(1.1)';
-        heroImg.style.transition = 'all 1.2s ease';
+        heroImg.style.transform = 'translateY(20px)';
+        heroImg.style.transition = 'all 0.8s ease';
         
         setTimeout(() => {
             heroImg.style.opacity = '1';
-            heroImg.style.transform = 'scale(1)';
-        }, 300);
+            heroImg.style.transform = 'translateY(0)';
+        }, 200);
     }
-    
-    // Effet de parallaxe léger sur l'image hero
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const parallax = document.querySelector('.imghero');
-        
-        if (parallax) {
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px) scale(1)`;
-        }
-    });
     
     // Animation des boutons au survol
     document.querySelectorAll('.btn').forEach(btn => {
