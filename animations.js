@@ -58,14 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Animation de l'image hero
     const heroImg = document.querySelector('.imghero');
     if (heroImg) {
+        // Animation simple au chargement uniquement
         heroImg.style.opacity = '0';
-        heroImg.style.transform = 'translateY(20px)';
-        heroImg.style.transition = 'all 0.8s ease';
+        heroImg.style.transition = 'opacity 0.6s ease';
         
         setTimeout(() => {
             heroImg.style.opacity = '1';
-            heroImg.style.transform = 'translateY(0)';
-        }, 200);
+        }, 300);
     }
     
     // Animation des boutons au survol
